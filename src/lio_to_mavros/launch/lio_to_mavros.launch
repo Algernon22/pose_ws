@@ -1,0 +1,18 @@
+<launch>
+  <arg name="odom_topic" default="/Odometry" />
+  <arg name="vision_topic" default="/mavros/vision_pose/pose" />
+  <arg name="odom_out_topic" default="/mavros/odometry/in" />
+  <arg name="publish_odom" default="false" />
+  <arg name="use_current_time" default="true" />
+
+  <node pkg="lio_to_mavros"
+        type="lio_to_mavros_node"
+        name="lio_to_mavros"
+        output="screen">
+    <param name="odom_topic" value="$(arg odom_topic)" />
+    <param name="vision_topic" value="$(arg vision_topic)" />
+    <param name="odom_out_topic" value="$(arg odom_out_topic)" />
+    <param name="publish_odom" value="$(arg publish_odom)" />
+    <param name="use_current_time" value="$(arg use_current_time)" />
+  </node>
+</launch>

@@ -1,0 +1,25 @@
+# Catkin build outputs
+/build/
+/devel/
+/install/
+/logs/
+/.catkin_tools/
+
+# ROS/runtime artifacts
+*.bag
+*.bag.active
+*.pcd
+*.log
+
+# Generated FAST-LIO logs
+src/FAST_LIO-main/Log/*.png
+src/FAST_LIO-main/Log/*.txt
+src/FAST_LIO-main/Log/*.csv
+src/FAST_LIO-main/Log/*.pdf
+src/FAST_LIO-main/PCD/*.pcd
+
+# Editor and local machine files
+.vscode/
+.idea/
+*.swp
+*~
